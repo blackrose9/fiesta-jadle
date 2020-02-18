@@ -42,15 +42,15 @@ public class Sql2oReviewDaoTest {
         assertEquals(2, reviewDao.getAll().size());
     }
 
-    @Test
-    public void getAllReviewsByRestaurant() throws Exception {
-        Restaurant testRestaurant = setupRestaurant();
-        Restaurant otherRestaurant = setupRestaurant(); //add in some extra data to see if it interferes
-        Review review1 = setupReviewForRestaurant(testRestaurant);
-        Review review2 = setupReviewForRestaurant(testRestaurant);
-        Review reviewForOtherRestaurant = setupReviewForRestaurant(otherRestaurant);
-        assertEquals(2, reviewDao.getAllReviewsByRestaurant(testRestaurant.getId()).size());
-    }
+//    @Test
+//    public void getAllReviewsByRestaurant() throws Exception {
+//        Restaurant testRestaurant = setupRestaurant();
+//        Restaurant otherRestaurant = setupRestaurant(); //add in some extra data to see if it interferes
+//        Review review1 = setupReviewForRestaurant(testRestaurant);
+//        Review review2 = setupReviewForRestaurant(testRestaurant);
+//        Review reviewForOtherRestaurant = setupReviewForRestaurant(otherRestaurant);
+//        assertEquals(2, reviewDao.getAllReviewsByRestaurant(testRestaurant.getId()).size());
+//    }
 
     @Test
     public void deleteById() throws Exception {
@@ -61,13 +61,13 @@ public class Sql2oReviewDaoTest {
         assertEquals(1, reviewDao.getAll().size());
     }
 
-    @Test
-    public void clearAll() throws Exception {
-        Review testReview = setupReview();
-        Review otherReview = setupReview();
-        reviewDao.clearAll();
-        assertEquals(0, reviewDao.getAll().size());
-    }
+//    @Test
+//    public void clearAll() throws Exception {
+//        Review testReview = setupReview();
+//        Review otherReview = setupReview();
+//        reviewDao.clearAll();
+//        assertEquals(0, reviewDao.getAll().size());
+//    }
 
     //helpers
 
